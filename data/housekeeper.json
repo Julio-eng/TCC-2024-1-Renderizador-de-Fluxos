@@ -1,0 +1,59 @@
+{
+    "form": [
+        {
+            "id": "1",
+            "type": "question",
+            "question": "Você possui carteira assinada?",
+            "options": [
+                {
+                    "text": "Sim",
+                    "next": "5"
+                },
+                {
+                    "text": "Não",
+                    "next": "2"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "type": "question",
+            "question": "Você trabalha em quantas casas?",
+            "options": [
+                {
+                    "text": "Apenas uma",
+                    "next": "3"
+                },
+                {
+                    "text": "Duas ou mais",
+                    "next": "5"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "type": "question",
+            "question": "Você trabalha quantos dias na semana nesta casa?",
+            "options": [
+                {
+                    "text": "Mais de duas vezes na semana",
+                    "next": "4"
+                },
+                {
+                    "text": "Até duas vezes por semana",
+                    "next": "5"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "type": "info",
+            "text": "Notamos que sua situação está irregular. Você tem direito a carteira assinada e a todos os direitos que dela advêm. Procure um advogado."
+        },
+        {
+            "id": "5",
+            "type": "info",
+            "text": "Fim do fluxo"
+        }
+    ]
+}

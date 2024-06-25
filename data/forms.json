@@ -1,0 +1,612 @@
+{
+  "formId": "1vhJXzxgy12Valle8h3z9DJuXFOlzSa0odczLe9kY5aw",
+  "info": {
+    "title": "Fluxo Trabalhista",
+    "documentTitle": "Fluxo Trabalhista"
+  },
+  "settings": {},
+  "revisionId": "0000017f",
+  "responderUri": "https://docs.google.com/forms/d/e/1FAIpQLScxstZDPGDFhtbrHC4x64HBuzSr1nZO5thwrB9zwQLm9bDgoQ/viewform",
+  "items": [
+    {
+      "itemId": "1e2061a2",
+      "title": "Você tem carteira assinada?",
+      "questionItem": {
+        "question": {
+          "questionId": "4b79dbb6",
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              {
+                "value": "Sim",
+                "goToSectionId": "18d747c3"
+              },
+              {
+                "value": "Não",
+                "goToSectionId": "58a689a1"
+              },
+              {
+                "value": "TESTES",
+                "goToSectionId": "7f552933"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "7f552933",
+      "pageBreakItem": {},
+      "title": "TESTES DEBUG"
+    },
+    {
+      "itemId": "18df5014",
+      "title": "Múltipla Escolha",
+      "questionItem": {
+        "question": {
+          "questionId": "0a3efe10",
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              {
+                "value": "Opção 1"
+              },
+              {
+                "value": "Opção 2"
+              },
+              {
+                "value": "Opção 3"
+              },
+              {
+                "value": "Opção 4"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "063d0800",
+      "title": "Caixas de seleção",
+      "questionItem": {
+        "question": {
+          "questionId": "51f3458e",
+          "choiceQuestion": {
+            "type": "CHECKBOX",
+            "options": [
+              {
+                "value": "Opção 1"
+              },
+              {
+                "value": "Opção 2"
+              },
+              {
+                "value": "Opção 3"
+              },
+              {
+                "value": "Opção 4"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "1ee13913",
+      "title": "Lista suspensa",
+      "questionItem": {
+        "question": {
+          "questionId": "1ead574b",
+          "choiceQuestion": {
+            "type": "DROP_DOWN",
+            "options": [
+              {
+                "value": "Opção 1"
+              },
+              {
+                "value": "Opção 2"
+              },
+              {
+                "value": "Opção 3"
+              },
+              {
+                "value": "Opção 4"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "282c0d10",
+      "title": "Escala Linear",
+      "questionItem": {
+        "question": {
+          "questionId": "4d1c6b0f",
+          "scaleQuestion": {
+            "low": 1,
+            "high": 5,
+            "lowLabel": "Mínimo",
+            "highLabel": "Máximo"
+          }
+        }
+      }
+    },
+    {
+      "itemId": "1cf33f71",
+      "questionGroupItem": {
+        "questions": [
+          {
+            "questionId": "4e437a0d",
+            "rowQuestion": {
+              "title": "Linha 1"
+            }
+          },
+          {
+            "questionId": "05cae10a",
+            "rowQuestion": {
+              "title": "Linha 2"
+            }
+          },
+          {
+            "questionId": "6e740ab7",
+            "rowQuestion": {
+              "title": "Linha 3"
+            }
+          },
+          {
+            "questionId": "376a8b7e",
+            "rowQuestion": {
+              "title": "Linha 4"
+            }
+          }
+        ],
+        "grid": {
+          "columns": {
+            "type": "RADIO",
+            "options": [
+              {
+                "value": "Coluna 1"
+              },
+              {
+                "value": "Coluna 2"
+              },
+              {
+                "value": "Coluna 3"
+              },
+              {
+                "value": "Coluna 4"
+              }
+            ]
+          }
+        }
+      },
+      "title": "Grade de múltipla escolha"
+    },
+    {
+      "itemId": "2f5320a0",
+      "questionGroupItem": {
+        "questions": [
+          {
+            "questionId": "4760b1e4",
+            "rowQuestion": {
+              "title": "Linha 1"
+            }
+          },
+          {
+            "questionId": "519742b3",
+            "rowQuestion": {
+              "title": "Linha 2"
+            }
+          },
+          {
+            "questionId": "5ca365b7",
+            "rowQuestion": {
+              "title": "Linha 3"
+            }
+          },
+          {
+            "questionId": "3f9422f8",
+            "rowQuestion": {
+              "title": "Linha 4"
+            }
+          }
+        ],
+        "grid": {
+          "columns": {
+            "type": "CHECKBOX",
+            "options": [
+              {
+                "value": "Coluna 1"
+              },
+              {
+                "value": "Coluna 2"
+              },
+              {
+                "value": "Coluna 3"
+              },
+              {
+                "value": "Coluna 4"
+              }
+            ]
+          }
+        }
+      },
+      "title": "Grade de caixa de seleção"
+    },
+    {
+      "itemId": "459a2a11",
+      "title": "Resposta curta",
+      "questionItem": {
+        "question": {
+          "questionId": "34a1cd8a",
+          "textQuestion": {}
+        }
+      }
+    },
+    {
+      "itemId": "4525dba4",
+      "title": "Resposta parágrafo",
+      "questionItem": {
+        "question": {
+          "questionId": "6881faeb",
+          "textQuestion": {
+            "paragraph": true
+          }
+        }
+      }
+    },
+    {
+      "itemId": "5bd542ea",
+      "title": "Data",
+      "questionItem": {
+        "question": {
+          "questionId": "61d61e4a",
+          "dateQuestion": {
+            "includeYear": true
+          }
+        }
+      }
+    },
+    {
+      "itemId": "4f02a118",
+      "title": "Horário",
+      "questionItem": {
+        "question": {
+          "questionId": "63f83836",
+          "timeQuestion": {}
+        }
+      }
+    },
+    {
+      "itemId": "18d747c3",
+      "pageBreakItem": {},
+      "title": "Tem carteira assinada."
+    },
+    {
+      "itemId": "4c42711d",
+      "title": "Qual seu trabalho?",
+      "questionItem": {
+        "question": {
+          "questionId": "0fb65392",
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              {
+                "value": "Empregada Doméstica",
+                "goToSectionId": "5b18e789"
+              },
+              {
+                "value": "Policial",
+                "goToSectionId": "5ea56c81"
+              },
+              {
+                "value": "Juiz",
+                "goToSectionId": "5ea56c81"
+              },
+              {
+                "isOther": true,
+                "goToAction": "NEXT_SECTION"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "5b18e789",
+      "pageBreakItem": {},
+      "title": "Empregada Doméstica"
+    },
+    {
+      "itemId": "4bc401dd",
+      "title": "Escolha uma opção",
+      "questionItem": {
+        "question": {
+          "questionId": "388258a0",
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              {
+                "value": "Meus Direitos",
+                "goToSectionId": "42ed6665"
+              },
+              {
+                "value": "Recisão",
+                "goToSectionId": "6701d3be"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "42ed6665",
+      "pageBreakItem": {},
+      "title": "Meus Direitos"
+    },
+    {
+      "itemId": "573f3ea0",
+      "title": "Escolha uma opção",
+      "questionItem": {
+        "question": {
+          "questionId": "39b9cde6",
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              {
+                "value": "Férias",
+                "goToSectionId": "55c5d3d8"
+              },
+              {
+                "value": "Salário",
+                "goToSectionId": "5ea56c81"
+              },
+              {
+                "value": "Jornada de Trabalho",
+                "goToSectionId": "5ea56c81"
+              },
+              {
+                "value": "13º Salário",
+                "goToSectionId": "5ea56c81"
+              },
+              {
+                "value": "Licença Maternidade",
+                "goToSectionId": "5ea56c81"
+              },
+              {
+                "value": "Benefícios Previdenciáríos",
+                "goToSectionId": "5ea56c81"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "55c5d3d8",
+      "pageBreakItem": {},
+      "title": "Férias"
+    },
+    {
+      "itemId": "2796ef2e",
+      "textItem": {},
+      "title": "Férias",
+      "description": "É direito do empregado férias anuais de 30 dias e remuneradas com, pelo menos, ⅓ a mais que o salário normal. O direito se dá após cada período de 12 meses de serviço prestado à mesma pessoa ou família, contado da data da admissão. "
+    },
+    {
+      "itemId": "6701d3be",
+      "pageBreakItem": {},
+      "title": "Recisão"
+    },
+    {
+      "itemId": "36fe4190",
+      "title": "Escolha uma opção",
+      "questionItem": {
+        "question": {
+          "questionId": "129f2f4c",
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              {
+                "value": "Demissão Voluntária"
+              },
+              {
+                "value": "Demissão Involuntária"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "58a689a1",
+      "pageBreakItem": {},
+      "title": "Não tem carteira assinada."
+    },
+    {
+      "itemId": "08ebb862",
+      "title": "Você trabalha em quantas casas?",
+      "questionItem": {
+        "question": {
+          "questionId": "20f65e2e",
+          "required": true,
+          "choiceQuestion": {
+            "type": "DROP_DOWN",
+            "options": [
+              {
+                "value": "Apenas uma",
+                "goToSectionId": "0067fd17"
+              },
+              {
+                "value": "2 ou mais",
+                "goToSectionId": "1c3f25ca"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "0067fd17",
+      "pageBreakItem": {},
+      "title": "Trabalha apenas em uma casa"
+    },
+    {
+      "itemId": "30dcb40e",
+      "title": "Você trabalha quantos dias na semana nesta casa?",
+      "questionItem": {
+        "question": {
+          "questionId": "50192468",
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              {
+                "value": "Até 2 vezes por semana",
+                "goToSectionId": "1c3f25ca"
+              },
+              {
+                "value": "Mais de 2 vezes por semana",
+                "goToSectionId": "1e538e1b"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "1e538e1b",
+      "pageBreakItem": {},
+      "title": "SITUAÇÃO IRREGULAR"
+    },
+    {
+      "itemId": "5228e9a8",
+      "textItem": {},
+      "title": "Situação Irregular",
+      "description": "Notamos que sua situação está irregular. Você tem direito à carteira assinada e a todos os direitos que dela advêm. Procure um advogado. "
+    },
+    {
+      "itemId": "1c3f25ca",
+      "pageBreakItem": {},
+      "title": "Trabalha em duas casas ou mais."
+    },
+    {
+      "itemId": "3a42f6ff",
+      "title": "Qual o seu trabalho?",
+      "questionItem": {
+        "question": {
+          "questionId": "02a07d72",
+          "required": true,
+          "choiceQuestion": {
+            "type": "DROP_DOWN",
+            "options": [
+              {
+                "value": "DIARISTA",
+                "goToSectionId": "062a2ad0"
+              },
+              {
+                "value": "OUTRO",
+                "goToSectionId": "5ea56c81"
+              },
+              {
+                "value": "OUTRO 2",
+                "goToSectionId": "5ea56c81"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "062a2ad0",
+      "pageBreakItem": {},
+      "title": "Empregada Doméstica"
+    },
+    {
+      "itemId": "3e335df8",
+      "title": "Escolha uma opção:",
+      "questionItem": {
+        "question": {
+          "questionId": "3c1fd76c",
+          "required": true,
+          "choiceQuestion": {
+            "type": "DROP_DOWN",
+            "options": [
+              {
+                "value": "MEUS DIREITOS",
+                "goToSectionId": "5c58c1e6"
+              },
+              {
+                "value": "REGULARIZAÇÃO",
+                "goToSectionId": "514819e1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "514819e1",
+      "pageBreakItem": {},
+      "title": "REGULARIZAÇÃO"
+    },
+    {
+      "itemId": "5e3c3f5a",
+      "title": "Regularização",
+      "questionItem": {
+        "question": {
+          "questionId": "2387ed97",
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              {
+                "value": "Como regularizar?",
+                "goToSectionId": "6d767a3c"
+              },
+              {
+                "value": "Por que regularizar?",
+                "goToSectionId": "3afeb03f"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "itemId": "3afeb03f",
+      "pageBreakItem": {},
+      "title": "Por que regularizar?"
+    },
+    {
+      "itemId": "3eabc914",
+      "textItem": {},
+      "title": "Por que regularizar? ",
+      "description": "A regularização é necessária para que se usufrua de direitos previdenciários do INSS. "
+    },
+    {
+      "itemId": "6d767a3c",
+      "pageBreakItem": {},
+      "title": "Como regularizar?"
+    },
+    {
+      "itemId": "4b2675dd",
+      "textItem": {},
+      "title": "Como regularizar? ",
+      "description": "Para a regularização, é preciso que haja a abertura de MEI no site \u003chttps://www.gov.br/pt-br/servicos/realizar-registro-como-microempreendedor-individual-mei\u003e. Será cobrada uma taxa mensal a título de imposto. "
+    },
+    {
+      "itemId": "5c58c1e6",
+      "pageBreakItem": {},
+      "title": "MEUS DIREITOS",
+      "description": "Enquanto diarista, a empregada não pode usufruir dos direitos típicos de empregadas domésticas, como férias remuneradas, salário mínimo, horas extras, vale-transporte etc. As diaristas têm apenas direitos previdenciários gerais, desde que regularizadas. "
+    },
+    {
+      "itemId": "5ea56c81",
+      "pageBreakItem": {},
+      "title": "AINDA NÃO IMPLEMENTADO"
+    }
+  ]
+}
