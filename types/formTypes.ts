@@ -17,7 +17,11 @@ export interface Section {
     items: Item[] | [];
 }
 
-export interface Form    {
-    title: string;
-    sections: Section[];
+export interface Occupation {
+  title: string;
+  sections: Section[];
+}
+
+export interface Form {
+    occupation: Occupation
 }
