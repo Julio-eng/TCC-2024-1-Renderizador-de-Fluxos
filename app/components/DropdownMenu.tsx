@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react"
 import OverflowIcon from "./icons/OverflowIcon"
 import Link from "next/link"
+import InfoIcon from "./icons/InfoIcon"
+import QuestionMarkIcon from "./icons/QuestionMarkIcon"
 
 const DropdownMenu = () => {
 
@@ -31,8 +33,18 @@ const DropdownMenu = () => {
       </button>
       {isOpen && (
         <ul tabIndex={0} className="absolute right-0 z-[1] menu p-2 shadow bg-base-100 rounded-box w-44">
-          <li><Link href="/">Sobre</Link></li>
-          <li><Link href="/">Ajuda</Link></li>
+          <li>
+            <Link href="/about">
+              <InfoIcon />
+              Sobre
+            </Link>
+          </li>
+          <li>
+            <Link href="/help">
+              <QuestionMarkIcon />
+              Ajuda
+            </Link>
+          </li>
         </ul>
       )}
     </div>

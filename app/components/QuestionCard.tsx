@@ -11,7 +11,7 @@ interface Props {
 const QuestionCard = ({itemData, updateContent}: Props) => {
   
   return (
-    <div className='flex-1 flex flex-col items-center justify-center gap-20 p-2'>
+    <div className='flex flex-col items-center justify-center gap-16 px-5 py-10 rounded'>
         <div className='flex items-center'>
             <p className='text-center text-lg font-medium'>{itemData?.text}</p>
         </div>
