@@ -37,7 +37,7 @@ const Flow = () => {
   useEffect(() => {
     const getOccupationForm = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/flow/api?id=${endpointId}`)
+        const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/FormFlow/api?id=${endpointId}`)
         if (!res.ok) {
           throw new Error('Network response was not ok');
         }

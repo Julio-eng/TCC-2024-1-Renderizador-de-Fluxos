@@ -8,7 +8,7 @@ interface Occupation {
 }
 
 const getOcupations = async (): Promise<Occupation[]> => {
-  const res = await fetch("http://localhost:4000/ocupations")
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ocupations`)
 
   if(!res.ok){
     throw new Error ("Failed to fetch data")
@@ -28,7 +28,7 @@ const HomePage = async () => {
       <p className='text-lg font-medium'>Escolha sua profissão</p>
       <div className='flex flex-col gap-3'>
         {occupations.map((occupation) => (
-          <Link className='btn btn-wide' key={occupation.endpoint} href={`/flow?endpointId=${occupation.endpoint}`}>
+          <Link className='btn btn-wide' key={occupation.endpoint} href={`/FormFlow?endpointId=${occupation.endpoint}`}>
             {occupation.name}
           </Link>
         ))}
