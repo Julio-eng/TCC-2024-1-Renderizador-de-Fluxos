@@ -2,7 +2,6 @@ import React from 'react'
 import TopNavBar from './TopNavBar';
 
 interface Props {
-  // Icon: React.ComponentType<any>;
   title: string;
   text: string
   breadCrumbText: string
@@ -10,10 +9,14 @@ interface Props {
 
 const ContentCard = ({ title, text, breadCrumbText }: Props) => {
   return (
-    <div className='w-full h-full flex flex-col items-center justify-center gap-10'>
+    <div className='h-full flex flex-col'>
       <TopNavBar breadCrumbText={breadCrumbText} />
-      <p>{title}</p>
-      <p className='w-[70%] text-center'>{text}</p>
+      <div className='flex flex-col items-center justify-center flex-grow'>
+        <div className='w-11/12 p-4 flex flex-col gap-5 items-center justify-center rounded-xl bg-zomp text-white-smoke'>
+          <p className='font-semibold text-xl'>{title}</p>
+          <p className='text-justify text-lg'>{text}</p>
+        </div>
+      </div>
     </div>
   )
 }

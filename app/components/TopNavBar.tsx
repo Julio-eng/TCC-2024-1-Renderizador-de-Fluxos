@@ -2,6 +2,7 @@
 import React from 'react'
 import BackIcon from './icons/BackIcon'
 import Link from 'next/link'
+import BackQuestion from './icons/BackQuestion'
 
 interface Props {
   breadCrumbText: string
@@ -11,10 +12,10 @@ interface Props {
 const TopNavBar = ({ breadCrumbText }: Props) => {
 
   return (
-    <div className='flex justify-between items-start p-2 absolute top-0 left-0 w-full'>
+    <div className='w-full p-3'>
       <div className="flex items-center gap-4">
         <Link href="/">
-          <BackIcon />
+          <BackQuestion />
         </Link>
         <p className="text-sm font-semibold">{breadCrumbText}</p>
       </div>

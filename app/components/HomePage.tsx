@@ -10,8 +10,8 @@ interface Occupation {
 const getOcupations = async (): Promise<Occupation[]> => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ocupations`)
 
-  if(!res.ok){
-    throw new Error ("Failed to fetch data")
+  if (!res.ok) {
+    throw new Error("Failed to fetch data")
   }
 
   return res.json()
@@ -21,7 +21,7 @@ const HomePage = async () => {
   const occupations: Occupation[] = await getOcupations()
 
   return (
-    <div className='relative h-full flex flex-col items-center justify-center gap-10'>
+    <div className='min-h-screen flex flex-col items-center justify-center gap-10'>
       <div className='absolute top-4 right-4'>
         <DropdownMenu />
       </div>

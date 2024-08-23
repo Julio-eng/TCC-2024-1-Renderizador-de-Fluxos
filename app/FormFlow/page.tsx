@@ -103,26 +103,31 @@ const Flow = () => {
   }
 
   return (
-    <div className='w-full h-full flex flex-col items-center justify-center gap-5'>
-      <TopNavBar breadCrumbText='Empregado Doméstico' showConfirmationModal={true} />
+    <div className='h-full flex flex-col'>
+      <TopNavBar breadCrumbText='Empregado Doméstico' />
       <StartOverModal
         isOpen={isModalOpen}
         onContinue={handleContinue}
         onStartOver={handleStartOver}
       />
-      {
-        section && section.items.length !== 0 ?
-          <QuestionCard itemData={section.items[0]} updateContent={updateSection} />
-          :
-          <InformationCard section={section} />
-      }
-      {
-        //Olhar por quê sectionIdStack.current.length está como 2 na primeira renderização (Em prod não ocorre esse problema)
-        section && sectionIdStack.current.length > 1 && (<button className='flex justify-center items-center space-x-2 p-2 rounded' onClick={goToPreviousSection}>
-          <BackQuestion />
-          <span className='text-xs'>Pergunta anterior</span>
-        </button>)
-      }
+      {!isModalOpen && (
+        <div className='flex flex-col justify-center items-center gap-10 flex-grow'>
+          {
+            section && section.items.length !== 0 ?
+              <QuestionCard itemData={section.items[0]} updateContent={updateSection} />
+              :
+              <InformationCard section={section} />
+          }
+          {
+            //Olhar por quê sectionIdStack.current.length está como 2 na primeira renderização (Em prod não ocorre esse problema)
+            section && sectionIdStack.current.length > 1 &&
+            (<button className='w-full flex justify-center items-center space-x-2 p-2 rounded' onClick={goToPreviousSection}>
+              <BackQuestion />
+              <span className='text-xs'>Pergunta anterior</span>
+            </button>)
+          }
+        </div>
+      )}
     </div>
   )
 }

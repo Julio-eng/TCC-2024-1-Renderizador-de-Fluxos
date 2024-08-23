@@ -2,7 +2,7 @@ import HomePage from "./components/HomePage";
 
 export default function Home() {
   return (
-    <main className="h-full">
+    <main className="min-h-screen">
       <HomePage />
     </main>
   );

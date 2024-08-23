@@ -3,6 +3,6 @@ export async function GET(request: Request) {
   const id = searchParams.get('id')
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${id}`)
   const occupation = await res.json()
- 
+
   return Response.json({ occupation })
 }

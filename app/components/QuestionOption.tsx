@@ -7,11 +7,11 @@ interface Props {
   updateContent: (contentId: string) => void
 }
 
-const QuestionOption = ({optionData, updateContent}: Props) => {
+const QuestionOption = ({ optionData, updateContent }: Props) => {
 
   return (
-    <li>
-        <button className='btn btn-wide' onClick={() => {updateContent(optionData.goToSectionId)}}>{optionData.value}</button>
+    <li className='w-full'>
+      <button className='btn w-full' onClick={() => { updateContent(optionData.goToSectionId) }}>{optionData.value}</button>
     </li>
   )
 }

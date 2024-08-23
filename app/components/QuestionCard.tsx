@@ -8,16 +8,16 @@ interface Props {
   updateContent: (contentId: string) => void;
 }
 
-const QuestionCard = ({itemData, updateContent}: Props) => {
-  
+const QuestionCard = ({ itemData, updateContent }: Props) => {
+
   return (
-    <div className='flex flex-col items-center justify-center gap-16 px-5 py-10 rounded'>
-        <div className='flex items-center'>
-            <p className='text-center text-lg font-medium'>{itemData?.text}</p>
-        </div>
-        <ul className='flex flex-col items-center gap-2'>
-            {itemData?.options?.map((option, index) => <QuestionOption key={index} optionData={option} updateContent={updateContent}/>)}
-        </ul>
+    <div className='w-11/12 p-4 flex flex-col items-center rounded-xl gap-10'>
+      <div className='bg-ebony text-white-smoke px-5 py-12 w-full rounded-xl'>
+        <p className='text-xl font-medium text-center'>{itemData?.text}</p>
+      </div>
+      <ul className='flex flex-col items-center justify-center gap-2 w-full rounded-xl'>
+        {itemData?.options?.map((option, index) => <QuestionOption key={index} optionData={option} updateContent={updateContent} />)}
+      </ul>
     </div>
   )
 }

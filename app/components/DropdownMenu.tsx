@@ -16,7 +16,7 @@ const DropdownMenu = () => {
   }
 
   const handleMouseDown = (e: MouseEvent) => {
-    if(ref.current && !ref.current.contains(e.target as Node)) setIsOpen(false)
+    if (ref.current && !ref.current.contains(e.target as Node)) setIsOpen(false)
   }
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const DropdownMenu = () => {
   }, [])
 
   return (
-    <div ref={ref} className="relative inline-block">
+    <div ref={ref}>
       <button onClick={toggleMenu}>
         <OverflowIcon />
       </button>
