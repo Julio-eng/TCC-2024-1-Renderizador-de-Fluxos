@@ -5,7 +5,7 @@ import Link from 'next/link'
 import BackQuestion from './icons/BackQuestion'
 
 interface Props {
-  breadCrumbText: string
+  breadCrumbText: string | undefined
   showConfirmationModal?: boolean
 }
 
