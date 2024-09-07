@@ -27,12 +27,12 @@ const DropdownMenu = () => {
   }, [])
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="bg-white">
       <button onClick={toggleMenu}>
         <OverflowIcon />
       </button>
       {isOpen && (
-        <ul tabIndex={0} className="absolute right-0 z-[1] menu p-2 shadow bg-base-100 rounded-box w-44">
+        <ul tabIndex={0} className="absolute right-0 z-[1] menu p-2 shadow bg-base-100 rounded-box w-44 bg-white">
           <li>
             <Link href="/about">
               <InfoIcon />

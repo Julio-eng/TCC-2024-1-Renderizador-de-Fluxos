@@ -13,12 +13,14 @@ const Flow = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [form, setForm] = useState<Occupation | undefined>()
   const [section, setSection] = useState<Section | undefined>()
+  const [loading, setLoading] = useState(true);
   const sectionIdStack = useRef<string[]>([])
   const searchParams = useSearchParams()
   const endpointId = searchParams.get('endpointId')
 
   useEffect(() => {
     const getOccupationForm = async () => {
+      setLoading(true);
       try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/FormFlow/api?id=${endpointId}`);
         if (!res.ok) {
@@ -36,6 +38,8 @@ const Flow = () => {
         }
       } catch (error) {
         console.error('Failed to fetch occupation form:', error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -103,33 +107,39 @@ const Flow = () => {
   }
 
   return (
-    <div className='h-full flex flex-col'>
+    <div className='h-full flex flex-col bg-white'>
       <TopNavBar breadCrumbText='Empregado Doméstico' />
       <StartOverModal
         isOpen={isModalOpen}
         onContinue={handleContinue}
         onStartOver={handleStartOver}
       />
-      {!isModalOpen && (
-        <div className='flex flex-col justify-center items-center gap-10 flex-grow'>
-          {
-            section && section.items.length !== 0 ?
-              <QuestionCard itemData={section.items[0]} updateContent={updateSection} />
-              :
-              <InformationCard section={section} />
-          }
-          {
-            //Olhar por quê sectionIdStack.current.length está como 2 na primeira renderização (Em prod não ocorre esse problema)
-            section && sectionIdStack.current.length > 1 &&
-            (<button className='w-full flex justify-center items-center space-x-2 p-2 rounded' onClick={goToPreviousSection}>
-              <BackQuestion />
-              <span className='text-xs'>Pergunta anterior</span>
-            </button>)
-          }
+      {loading ? (
+        <div className='flex justify-center items-center flex-grow'>
+          <span className="loading loading-spinner loading-lg"></span>
         </div>
+      ) : (
+        !isModalOpen && (
+          <div className='flex flex-col justify-center items-center gap-10 flex-grow'>
+            {
+              section && section.items[0].type !== 'textItem' ?
+                <QuestionCard itemData={section.items[0]} updateContent={updateSection} />
+                :
+                <InformationCard section={section} />
+            }
+            {
+              section && sectionIdStack.current.length > 1 &&
+              (<button className='w-full flex justify-center items-center space-x-2 p-2 rounded' onClick={goToPreviousSection}>
+                <BackQuestion />
+                <span className='text-xs'>Pergunta anterior</span>
+              </button>)
+            }
+          </div>
+        )
       )}
     </div>
-  )
+  );
+
 }
 
 const FlowPage = () => {

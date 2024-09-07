@@ -9,7 +9,7 @@ interface Props {
 
 const ContentCard = ({ title, text, breadCrumbText }: Props) => {
   return (
-    <div className='h-full flex flex-col'>
+    <div className='h-full flex flex-col bg-white'>
       <TopNavBar breadCrumbText={breadCrumbText} />
       <div className='flex flex-col items-center justify-center flex-grow'>
         <div className='w-11/12 p-4 flex flex-col gap-5 items-center justify-center rounded-xl bg-zomp text-white-smoke'>

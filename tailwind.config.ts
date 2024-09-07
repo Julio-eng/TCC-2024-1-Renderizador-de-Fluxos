@@ -18,6 +18,7 @@ const config: Config = {
         'cinnabar': '#D95D39',
         'zomp': '#519E8A',
         'white-smoke': '#F2F4F3',
+        'button-grey': '#F2F2F2'
       },
     },
   },

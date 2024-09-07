@@ -7,8 +7,9 @@ export interface Item {
   itemId: string;
   type: string;
   text: string;
-  required: boolean
-  options: Option[];
+  required?: boolean;
+  options?: Option[];
+  description: string
 }
 
 export interface Section {
