@@ -41,7 +41,7 @@ const DropdownMenu = () => {
           </li>
           <li>
             <Link href="/help">
-              <QuestionMarkIcon />
+              <QuestionMarkIcon size="size-5" />
               Ajuda
             </Link>
           </li>
