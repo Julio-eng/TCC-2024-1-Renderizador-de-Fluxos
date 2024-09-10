@@ -13,21 +13,21 @@ interface Props {
 }
 
 const QuestionCard = ({ item, description, updateContent }: Props) => {
-
-  if (!item) return null;
-
+  
   const [isQuestionOpen, setIsQuestionOpen] = useState<boolean>(true);
-
-  const questionItem = item.find(i => i.type !== 'textItem');
-  const infoItem = item.find(i => i.type === 'textItem');
-
+  
+  const questionItem = item?.find(i => i.type !== 'textItem');
+  const infoItem = item?.find(i => i.type === 'textItem');
+  
   const goToQuestion = () => {
     setIsQuestionOpen(true)
   }
-
+  
   useEffect(() => {
     infoItem && setIsQuestionOpen(false)
   }, [])
+  
+  if (!item) return null;
 
   return (
     <div className='w-11/12 p-4 flex flex-col items-center rounded-xl gap-10 bg-white'>

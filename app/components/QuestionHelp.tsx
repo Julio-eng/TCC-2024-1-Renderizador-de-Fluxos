@@ -9,26 +9,27 @@ interface Props {
 
 const QuestionHelp = ({ text } : Props) => {
 
-  if(!text) return null;
-
+  
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null);
-
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
-
+  
   const handleMouseDown = (e: MouseEvent) => {
     if (ref.current && !ref.current.contains(e.target as Node)) setIsOpen(false)
-  }
-
+    }
+  
   useEffect(() => {
     document.addEventListener('mousedown', handleMouseDown)
     return () => {
       document.removeEventListener('mousedown', handleMouseDown)
     }
   }, [])
-
+  
+  if(!text) return null;
+  
   return (
     <div ref={ref} className="bg-white">
       <button onClick={toggleMenu}>
