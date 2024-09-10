@@ -4,17 +4,19 @@ export interface Option {
 }
 
 export interface Item {
-  itemId: string;
   type: string;
-  text: string;
   required?: boolean;
   options?: Option[];
+  image?: string;
+  itemId: string
   description: string
+  text: string;
 }
 
 export interface Section {
   sectionId: string;
   title: string;
+  description: string
   items: Item[] | [];
 }
 
