@@ -12,7 +12,7 @@ interface Props {
 const TopNavBar = ({ breadCrumbText }: Props) => {
 
   return (
-    <div className='w-full p-3'>
+    <div className='w-full p-3 sticky top-0 bg-white'>
       <div className="flex items-center gap-4">
         <Link href="/">
           <BackQuestion />
