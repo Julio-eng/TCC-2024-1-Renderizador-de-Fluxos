@@ -122,13 +122,21 @@ const Flow = () => {
         !isModalOpen && (
           <div className='flex flex-col justify-center items-center gap-10 flex-grow'>
             {
-              section && section.items[0].type !== 'textItem' ?
-                <QuestionCard itemData={section.items[0]} updateContent={updateSection} />
-                :
-                <InformationCard section={section} />
+              section && (
+                section.items.length > 1 ? (
+                  <QuestionCard item={section.items} description={section.description} updateContent={updateSection} />
+                ) : (
+                  section.items[0]?.type !== 'textItem' ? (
+                    <QuestionCard item={section.items} description={section.description} updateContent={updateSection} />
+                  ) : (
+                    <InformationCard section={section} />
+                  )
+                )
+              )
             }
+
             {
-              section && sectionIdStack.current.length > 1 &&
+              section && sectionIdStack.current.length > 1 && section.items.length === 1 &&
               (<button className='w-full flex justify-center items-center space-x-2 p-2 rounded' onClick={goToPreviousSection}>
                 <BackQuestion />
                 <span className='text-xs'>Pergunta anterior</span>
