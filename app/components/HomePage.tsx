@@ -8,7 +8,7 @@ interface Occupation {
 }
 
 const getOcupations = async (): Promise<Occupation[]> => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}?type=listForms`, { next: { revalidate: 10 } })
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}listForms`, { next: { revalidate: 10 } })
 
   if (!res.ok) {
     throw new Error("Failed to fetch data")
