@@ -1,6 +1,6 @@
 'use client'
 import React, { Suspense, useEffect, useRef, useState } from 'react'
-import { Section } from '@/types/formTypes'
+import { Item, Section } from '@/types/formTypes'
 import InformationCard from '../components/InformationCard';
 import QuestionCard from '../components/QuestionCard'
 import BackQuestion from '../components/icons/BackQuestion';
@@ -122,21 +122,16 @@ const Flow = () => {
         !isModalOpen && (
           <div className='flex flex-col justify-center items-center gap-10 flex-grow'>
             {
-              section && (
-                section.items.length > 1 ? (
-                  <QuestionCard item={section.items} description={section.description} updateContent={updateSection} />
-                ) : (
-                  section.items[0]?.type !== 'textItem' ? (
-                    <QuestionCard item={section.items} description={section.description} updateContent={updateSection} />
-                  ) : (
-                    <InformationCard section={section} />
-                  )
-                )
-              )
+              section?.items.map((item: Item) => (
+                item.type === 'textItem' ?
+                  (<InformationCard item={item} key={item.itemId}/>)
+                  :
+                  (<QuestionCard item={item} description={section.description} updateContent={updateSection} key={item.itemId}/>)
+              ))
             }
 
             {
-              section && sectionIdStack.current.length > 1 && section.items.length === 1 &&
+              section && sectionIdStack.current.length > 1 &&
               (<button className='w-full flex justify-center items-center space-x-2 p-2 rounded' onClick={goToPreviousSection}>
                 <BackQuestion />
                 <span className='text-xs'>Pergunta anterior</span>
