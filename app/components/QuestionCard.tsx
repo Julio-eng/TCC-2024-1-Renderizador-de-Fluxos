@@ -14,16 +14,17 @@ const QuestionCard = ({ item, description, updateContent }: Props) => {
   return (
     <div className='w-11/12 p-4 flex flex-col items-center rounded-xl gap-10 bg-white'>
       {item?.image && (
-        <Image
-          src={item.image}
-          width={500}
-          height={500}
-          alt="Context Image"
-          className='rounded-xl'
-        />
-
+        <>
+          <Image
+            src={item.image}
+            width={500}
+            height={500}
+            alt="Context Image"
+            className='rounded-xl'
+          />
+          <div className="divider"></div>
+        </>
       )}
-
       <div className='w-full flex justify-end'>
         <QuestionHelp text={description} />
       </div>

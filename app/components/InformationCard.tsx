@@ -7,8 +7,10 @@ interface Props {
 
 const InformationCard = ({ item }: Props) => {
   return (
-    <div className='w-11/12 min-h-60 p-4 flex flex-col items-center rounded-xl gap-10 bg-cinnabar'>
-      <p className='w-3/4 text-justify text-xl text-white-smoke font-medium'>{item?.description}</p>
+    <div className='w-11/12 md:w-3/4 lg:w-1/2 min-h-60 p-6 flex flex-col items-center rounded-xl gap-6 bg-cinnabar shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl'>
+      <p className='w-full text-justify text-lg text-white-smoke font-medium leading-relaxed'>
+        {item?.description}
+      </p>
     </div>
   )
 }
