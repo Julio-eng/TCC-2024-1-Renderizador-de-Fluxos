@@ -14,7 +14,7 @@ const TopNavBar = ({ breadCrumbText }: Props) => {
   return (
     <div className='navbar sticky top-0 bg-white'>
       <div className="flex items-center gap-4">
-        <Link href="/">
+        <Link href="/" className='active:scale-90 transition-transform duration-150'>
           <BackQuestion />
         </Link>
         <p className="text-sm font-semibold">{breadCrumbText}</p>

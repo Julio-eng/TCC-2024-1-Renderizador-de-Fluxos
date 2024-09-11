@@ -33,7 +33,7 @@ const OccupationSearch = ({ occupations }: Props) => {
           <input
             type="text"
             className="grow"
-            placeholder="Search"
+            placeholder="Pesquisar"
             name="search"
             value={searchTerm}
             onChange={handleSearchChange} />

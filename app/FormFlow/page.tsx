@@ -116,25 +116,25 @@ const Flow = () => {
       />
       {loading ? (
         <div className='flex justify-center items-center flex-grow'>
-          <span className="loading loading-spinner loading-lg"></span>
+          <span className="loading loading-spinner loading-lg text-gray-500"></span>
         </div>
       ) : (
         !isModalOpen && (
-          <div className='flex flex-col justify-center items-center gap-10 flex-grow'>
-            {
-              section?.items.map((item: Item) => (
-                item.type === 'textItem' ?
-                  (<InformationCard item={item} key={item.itemId}/>)
-                  :
-                  (<QuestionCard item={item} description={section.description} updateContent={updateSection} key={item.itemId}/>)
-              ))
-            }
-
+          <div className='flex flex-col justify-center items-center gap-10 flex-grow p-4'>
+            <div className='w-full max-w-4xl flex flex-col items-center bg-gray-100 rounded-lg shadow-lg p-6'>
+              {
+                section?.items.map((item: Item) => (
+                  item.type === 'textItem' ?
+                    (<InformationCard item={item} key={item.itemId} />) :
+                    (<QuestionCard item={item} updateContent={updateSection} key={item.itemId} />)
+                ))
+              }
+            </div>
             {
               section && sectionIdStack.current.length > 1 &&
-              (<button className='w-full flex justify-center items-center space-x-2 p-2 rounded' onClick={goToPreviousSection}>
+              (<button className='w-full max-w-xs flex justify-center items-center space-x-2 p-3 rounded bg-blue-500 text-white hover:bg-blue-600 active:scale-95 transition-transform duration-150 shadow-lg' onClick={goToPreviousSection}>
                 <BackQuestion />
-                <span className='text-xs'>Pergunta anterior</span>
+                <span className='text-xs'>Seção anterior</span>
               </button>)
             }
           </div>
@@ -142,6 +142,7 @@ const Flow = () => {
       )}
     </div>
   );
+
 
 }
 

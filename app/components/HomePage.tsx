@@ -26,8 +26,8 @@ const HomePage = async () => {
       <div className='absolute top-4 right-4'>
         <DropdownMenu />
       </div>
-      <p className='text-lg font-medium'>Escolha sua profissão</p>
-      <OccupationSearch occupations={occupations}/>
+      <p className='text-lg font-medium'>Escolha um fluxo</p>
+      <OccupationSearch occupations={occupations} />
     </div>
   )
 }

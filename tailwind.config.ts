@@ -15,13 +15,15 @@ const config: Config = {
       },
       colors: {
         'ebony': '#45503B',
-        'cinnabar': '#D95D39',
+        'eggplant': '#603140',
         'zomp': '#519E8A',
         'white-smoke': '#F2F4F3',
-        'button-grey': '#F2F2F2'
       },
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark"]
+  }
 };
 export default config;

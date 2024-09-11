@@ -16,12 +16,12 @@ const StartOverModal = ({ isOpen, onContinue, onStartOver }: Props) => {
         <div className="modal-action">
           <button
             onClick={onStartOver}
-            className="btn">
+            className="btn  bg-red-500 text-white">
             Recomeçar
           </button>
           <button
             onClick={onContinue}
-            className="btn">
+            className="btn bg-blue-500 text-white">
             Continuar
           </button>
         </div>
