@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import DropdownMenu from './DropdownMenu'
+import OccupationSearch from './OccupationSearch';
 
 interface Occupation {
   id: string;
@@ -26,13 +27,7 @@ const HomePage = async () => {
         <DropdownMenu />
       </div>
       <p className='text-lg font-medium'>Escolha sua profissão</p>
-      <div className='flex flex-col gap-3'>
-        {occupations.map((occupation) => (
-          <Link className='btn btn-wide' key={occupation.id} href={`/FormFlow?endpointId=${occupation.id}`}>
-            {occupation.name}
-          </Link>
-        ))}
-      </div>
+      <OccupationSearch occupations={occupations}/>
     </div>
   )
 }
