@@ -34,7 +34,7 @@ const QuestionCard = ({ item, updateContent }: Props) => {
           <p className='text-lg md:text-xl font-medium text-center'>{item?.text}</p>
         </div>
         <ul className='flex flex-col items-center justify-center gap-2 w-full rounded-xl'>
-          {item?.options?.map((option) => <QuestionOption key={option.goToSectionId} optionData={option} updateContent={updateContent} />)}
+          {item?.options?.map((option) => <QuestionOption key={option.value} optionData={option} updateContent={updateContent} />)}
         </ul>
       </div>
       <div className="divider"></div>

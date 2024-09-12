@@ -30,7 +30,7 @@ const Flow = () => {
         const occupationForm: Form = await res.json();
         setForm(occupationForm.occupation);
 
-        const savedSectionId = localStorage.getItem('savedSectionId');
+        const savedSectionId = localStorage.getItem(occupationForm.occupation.title);
         if (savedSectionId) {
           setIsModalOpen(true);
         } else {
@@ -52,7 +52,7 @@ const Flow = () => {
       const initialSection = occupationForm.occupation.sections[0];
       setSection(initialSection);
       sectionIdStack.current.push(initialSection.sectionId);
-      localStorage.setItem('savedSectionId', initialSection.sectionId)
+      localStorage.setItem(occupationForm.occupation.title, initialSection.sectionId)
       return
     }
 
@@ -60,36 +60,45 @@ const Flow = () => {
       const initialSection = form.sections[0];
       setSection(initialSection);
       sectionIdStack.current.push(initialSection.sectionId);
-      localStorage.setItem('savedSectionId', initialSection.sectionId)
+      localStorage.setItem(form.title, initialSection.sectionId)
     }
   };
 
   const handleContinue = () => {
-    const savedSectionId = localStorage.getItem('savedSectionId');
-
-    if (form && savedSectionId) {
-      const savedSection = form.sections.find(section => section.sectionId === savedSectionId);
-      if (savedSection) {
-        setSection(savedSection);
-        sectionIdStack.current.push(savedSection.sectionId);
+    if(form?.title){
+      const savedSectionId = localStorage.getItem(form?.title);
+      if (savedSectionId) {
+        const savedSection = form.sections.find(section => section.sectionId === savedSectionId);
+        if (savedSection) {
+          setSection(savedSection);
+          sectionIdStack.current.push(savedSection.sectionId);
+        }
       }
     }
+    
     setIsModalOpen(false);
   };
 
   const handleStartOver = () => {
-    localStorage.removeItem('savedSectionId');
+    if(form?.title){
+      localStorage.removeItem(form?.title);
+    }
     normalStart();
     setIsModalOpen(false);
   };
 
   const updateSection = (sectionId: string): void => {
+    console.log(sectionId)
+    if (sectionId === null) {
+      alert("A próxima seção não está disponível. Entre em contato com o suporte.");
+      return;
+    }
     if (form) {
       const newSection: Section | undefined = form.sections.find(section => section["sectionId"] === sectionId)
       if (newSection) {
         setSection(newSection)
         sectionIdStack.current.push(sectionId)
-        localStorage.setItem('savedSectionId', sectionId)
+        localStorage.setItem(form.title, sectionId)
       }
     }
   }
@@ -101,7 +110,7 @@ const Flow = () => {
       const newSection: Section | undefined = form.sections.find(section => section["sectionId"] === sectionId)
       if (newSection) {
         setSection(newSection)
-        localStorage.setItem('savedSectionId', sectionId)
+        localStorage.setItem(form.title, sectionId)
       }
     }
   }
