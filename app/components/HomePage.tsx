@@ -26,7 +26,7 @@ const HomePage = async () => {
       <div className='absolute top-4 right-4'>
         <DropdownMenu />
       </div>
-      <p className='text-lg font-medium'>Escolha um fluxo</p>
+      <p className='text-lg font-medium'>Em qual área jurídica está a sua dúvida?</p>
       <OccupationSearch occupations={occupations} />
     </div>
   )
